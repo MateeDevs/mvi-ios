@@ -7,15 +7,20 @@ import SwiftUI
 
 struct LoginView: View {
     
+    let useCase = LoginUseCase()
+    
     @State var email: String = ""
     @State var password: String = ""
+    @State var isLogged: Bool = false
     
     var body: some View {
         VStack {
+            Text(isLogged ? "✅" : "❌")
+                .font(.largeTitle)
             TextField("Email", text: $email)
             SecureField("Password", text: $password)
             Button("Login") {
-                print("Do login")
+                isLogged = useCase.execute(email: email, password: password)
             }
         }
         .padding()

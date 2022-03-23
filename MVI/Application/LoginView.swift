@@ -11,7 +11,7 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-            Text(viewModel.state.isLogged ? "✅" : "❌")
+            Text(viewModel.state.isLogged)
                 .font(.largeTitle)
             TextField("Email", text: Binding<String>(
                 get: { viewModel.state.email },

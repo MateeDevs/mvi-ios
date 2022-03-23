@@ -14,7 +14,7 @@ class LoginViewModel: ObservableObject {
     struct State {
         var email: String = ""
         var password: String = ""
-        var isLogged: Bool = false
+        var isLogged: String = "❌"
     }
     
     enum Intent {
@@ -40,6 +40,6 @@ class LoginViewModel: ObservableObject {
     }
     
     private func login() {
-        state.isLogged = useCase.execute(email: state.email, password: state.password)
+        state.isLogged = useCase.execute(email: state.email, password: state.password) ? "✅" : "❌"
     }
 }

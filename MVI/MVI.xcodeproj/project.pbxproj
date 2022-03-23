@@ -12,6 +12,7 @@
 		450893C627EB243900FF16CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4508939D27EB243800FF16CA /* LoginView.swift */; };
 		450893C827EB243900FF16CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4508939E27EB243900FF16CA /* Assets.xcassets */; };
 		450893DB27EB4BC000FF16CA /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450893DA27EB4BC000FF16CA /* LoginUseCase.swift */; };
+		450893DD27EB4D1D00FF16CA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450893DC27EB4D1D00FF16CA /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		450893B027EB243900FF16CA /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450893B427EB243900FF16CA /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		450893DA27EB4BC000FF16CA /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		450893DC27EB4D1D00FF16CA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				4508939C27EB243800FF16CA /* App.swift */,
 				4508939D27EB243800FF16CA /* LoginView.swift */,
+				450893DC27EB4D1D00FF16CA /* LoginViewModel.swift */,
 				450893DA27EB4BC000FF16CA /* LoginUseCase.swift */,
 				4508939E27EB243900FF16CA /* Assets.xcassets */,
 			);
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450893DD27EB4D1D00FF16CA /* LoginViewModel.swift in Sources */,
 				450893C627EB243900FF16CA /* LoginView.swift in Sources */,
 				450893C427EB243900FF16CA /* App.swift in Sources */,
 				450893DB27EB4BC000FF16CA /* LoginUseCase.swift in Sources */,

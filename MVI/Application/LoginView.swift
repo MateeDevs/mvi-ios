@@ -6,9 +6,19 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TextField("Email", text: $email)
+            SecureField("Password", text: $password)
+            Button("Login") {
+                print("Do login")
+            }
+        }
+        .padding()
     }
 }
 

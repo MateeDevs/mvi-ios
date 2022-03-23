@@ -15,7 +15,7 @@ class LoginViewModelTests: XCTestCase {
         vm.onIntent(.changePassword(""))
         vm.onIntent(.login)
         
-        XCTAssertEqual(vm.state.isLogged, "❌")
+        XCTAssertEqual(vm.state.isLogged, "⁉️")
     }
     
     func testLoginValid() {

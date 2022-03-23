@@ -40,6 +40,10 @@ class LoginViewModel: ObservableObject {
     }
     
     private func login() {
-        state.isLogged = useCase.execute(email: state.email, password: state.password) ? "✅" : "❌"
+        if state.email.isEmpty || state.password.isEmpty {
+            state.isLogged = "⁉️"
+        } else {
+            state.isLogged = useCase.execute(email: state.email, password: state.password) ? "✅" : "❌"
+        }
     }
 }

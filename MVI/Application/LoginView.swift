@@ -7,22 +7,20 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @ObservedObject private var viewModel = LoginViewModel()
+    let useCase = LoginUseCase()
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var isLogged: Bool = false
     
     var body: some View {
         VStack {
-            Text(viewModel.state.isLogged)
+            Text(isLogged ? "✅" : "❌")
                 .font(.largeTitle)
-            TextField("Email", text: Binding<String>(
-                get: { viewModel.state.email },
-                set: { email in viewModel.onIntent(.changeEmail(email)) }
-            ))
-            SecureField("Password", text: Binding<String>(
-                get: { viewModel.state.password},
-                set: { password in viewModel.onIntent(.changePassword(password)) }
-            ))
+            TextField("Email", text: $email)
+            SecureField("Password", text: $password)
             Button("Login") {
-                viewModel.onIntent(.login)
+                isLogged = useCase.execute(email: email, password: password)
             }
         }
         .padding()
